@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Product list with cart</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; margin-top: 2rem; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="products">
+      <h1>Desserts</h1>
+      
+      <div class="product-grid" id="product-list">
+        <!-- Products will be dynamically generated here -->
+      </div>
+    </section>
+
+    <aside class="cart">
+      <h2>Your Cart (<span id="cart-count">0</span>)</h2>
+      <div id="cart-items">
+        <div class="empty-cart">
+          <img src="./assets/images/illustration-empty-cart.svg" alt="Empty cart" class="empty-cart-image">
+          <p class="empty-cart-message">Your added items will appear here</p>
+        </div>
+      </div>
+      <div class="cart-summary">
+        <div class="order-total">
+          <p>Order Total</p>
+          <p id="total-price">$0.00</p>
+        </div>
+        <div class="delivery-info">
+          <img src="./assets/images/icon-carbon-neutral.svg" alt="Eco friendly" class="eco-icon">
+          <p>This is a <span class="carbon-neutral">carbon-neutral</span> delivery</p>
+        </div>
+        <button id="confirm-order" class="btn-primary">Confirm Order</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Order confirmation modal -->
+  <div class="modal" id="confirmation-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="check-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#4CAF50"/>
+            <path d="M8 12L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h2>Order Confirmed</h2>
+        <p class="modal-subtitle">We hope you enjoy your food!</p>
+      </div>
+      
+      <div class="order-summary" id="modal-order-items">
+        <!-- Order items will be listed here -->
+      </div>
+      
+      <div class="modal-total">
+        <p>Order Total</p>
+        <p id="modal-total-price">$0.00</p>
+      </div>
+      
+      <button id="new-order" class="btn-primary">Start New Order</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
