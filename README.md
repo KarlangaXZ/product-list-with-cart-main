@@ -2,7 +2,7 @@
 
 # 🛒 Product List with Cart
 
-A simple web application where users can view a list of products and add them to a shopping cart.
+A web application where users can view a list of products and add them to a shopping cart.
 
 ![Demo Screenshot](Screen.png) <!-- Optional: Add a screenshot if you have one -->
 
